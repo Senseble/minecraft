@@ -40,20 +40,6 @@ public class Tier1Teleporter extends Block{
 		return true;
 		
 	}
-	@Override
-	public boolean onBlockActivated(World world, int par2, int par3, int par4, EntityPlayer player, 
-										int par6, float par7, float par8, float par9) {
-			if(!world.isRemote){
-				TileEntityTeleporter t = (TileEntityTeleporter) world.getBlockTileEntity(par2, par3, par4);
-				t.processActivate(player, world);
-				
-			}
-		
-		return true;
-		
-		
-		
-		
-	}
+	
 
 }

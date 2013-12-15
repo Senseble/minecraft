@@ -12,7 +12,7 @@ public class ConfigHandler {
 		BlockInfo.TIER1_ID = config.getBlock("Blocks", BlockInfo.TIER1_KEY, BlockInfo.TIER1_DEFAULT).getInt();
 		
 		ItemInfo.IT1_ID = config.getItem(ItemInfo.IT1_KEY, ItemInfo.IT1_DEFAULT).getInt();
-		
+		ItemInfo.CORE_ID = config.getItem(ItemInfo.CORE_KEY, ItemInfo.CORE_DEFAULT).getInt();
 		
 		config.save();
 	}
