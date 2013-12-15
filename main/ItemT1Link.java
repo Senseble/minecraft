@@ -24,9 +24,10 @@ public class ItemT1Link extends Item{
     {
 			NBTTagCompound compound = stack.stackTagCompound;
 		stack.writeToNBT(compound);
-		
+		compound.setInteger("x", x);
+		compound.setInteger("y", y);
+		compound.setInteger("z", z);
 		player.addChatMessage("Coordinates : " + "x " + x + " y " + y + " z " + z);
-			
 			
 		
 		

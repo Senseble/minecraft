@@ -20,10 +20,8 @@ public class Tier1Teleporter extends Block{
 	}
 	
 	@Override
-	public void onBlockClicked(World world, int x, int y, int z, EntityPlayer player) {
-		if(!world.isRemote){
-			
-		}
+	public static void onBlockActivated(){
+		
 	}
 	
 
