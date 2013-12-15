@@ -1,5 +1,6 @@
 package main;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -21,29 +22,31 @@ public class MoTeleport {
 	@Instance(value = BasicInfo.MOD_ID)
 	public static MoTeleport instance;
 	
-	@SidedProxy(clientSide = "main.proxies.ClientProxy", 
-				serverSide = "main.proxies.CommonProxy")
+	@SidedProxy(clientSide = "main.ClientProxy", 
+				serverSide = "main.CommonProxy")
 	public static CommonProxy proxy;
 	
-	public static Item tier;
+	
+	
 	
 	
 	@EventHandler
 	public static void preinit(FMLPreInitializationEvent event){
-		//Blocks.init();
-		//Blocks.addNames();
-		//Items.init();
-		tier = new ItemT1Link(3098);
+		Blocks.init();
+		
+		
+		Items.init();
+		
 		
 	}
 	
 	@EventHandler
 	public static void load(FMLInitializationEvent event){
-		//Items.addNames();
-		LanguageRegistry.addName(tier, "Tier 1 Link");
-		GameRegistry.registerItem(tier, "Tier 1 Link");
-	}
+		Items.addNames();
+		Blocks.addNames();
+		
 	
+	}
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event){
 		

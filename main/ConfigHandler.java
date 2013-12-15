@@ -9,9 +9,9 @@ public class ConfigHandler {
 		Configuration config = new Configuration(file);
 		config.load();
 		
-		BlockInfo.T1_ID = config.getBlock(BlockInfo.T1_KEY, BlockInfo.T1_DEFAULT).getInt();
+		BlockInfo.TIER1_ID = config.getBlock("Blocks", BlockInfo.TIER1_KEY, BlockInfo.TIER1_DEFAULT).getInt();
 		
-	//	ItemInfo.IT1_ID = config.getItem(ItemInfo.IT1_KEY, ItemInfo.IT1_DEFAULT).getInt();
+		ItemInfo.IT1_ID = config.getItem(ItemInfo.IT1_KEY, ItemInfo.IT1_DEFAULT).getInt();
 		
 		
 		config.save();
