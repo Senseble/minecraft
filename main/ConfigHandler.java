@@ -2,7 +2,6 @@ package main;
 
 import java.io.File;
 
-import main.blocks.BlockInfo;
 import net.minecraftforge.common.Configuration;
 
 public class ConfigHandler {
@@ -11,6 +10,8 @@ public class ConfigHandler {
 		config.load();
 		
 		BlockInfo.T1_ID = config.getBlock(BlockInfo.T1_KEY, BlockInfo.T1_DEFAULT).getInt();
+		
+	//	ItemInfo.IT1_ID = config.getItem(ItemInfo.IT1_KEY, ItemInfo.IT1_DEFAULT).getInt();
 		
 		
 		config.save();
